@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Monedas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-exchange-alt"></i> Conversor de Monedas</h1>
+            <p>Convierte entre diferentes monedas del mundo en tiempo real</p>
+        </header>
+
+        <main class="converter">
+            <div class="converter-card">
+                <div class="input-group">
+                    <label for="amount">Cantidad</label>
+                    <input type="number" id="amount" placeholder="0.00" value="1">
+                </div>
+
+                <div class="currency-selector">
+                    <div class="from-currency">
+                        <label for="fromCurrency">De</label>
+                        <select id="fromCurrency">
+                            <option value="USD">USD - Dólar Estadounidense</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="GBP">GBP - Libra Esterlina</option>
+                            <option value="JPY">JPY - Yen Japonés</option>
+                            <option value="CAD">CAD - Dólar Canadiense</option>
+                            <option value="AUD">AUD - Dólar Australiano</option>
+                            <option value="CHF">CHF - Franco Suizo</option>
+                            <option value="CNY">CNY - Yuan Chino</option>
+                            <option value="MXN">MXN - Peso Mexicano</option>
+                            <option value="BRL">BRL - Real Brasileño</option>
+                            <option value="ARS">ARS - Peso Argentino</option>
+                            <option value="CLP">CLP - Peso Chileno</option>
+                            <option value="COP">COP - Peso Colombiano</option>
+                            <option value="PEN">PEN - Sol Peruano</option>
+                            <option value="UYU">UYU - Peso Uruguayo</option>
+                            <option value="VEF">VEF - Bolívar Venezolano</option>
+                        </select>
+                    </div>
+
+                    <button id="swapBtn" class="swap-btn">
+                        <i class="fas fa-exchange-alt"></i>
+                    </button>
+
+                    <div class="to-currency">
+                        <label for="toCurrency">A</label>
+                        <select id="toCurrency">
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="USD">USD - Dólar Estadounidense</option>
+                            <option value="GBP">GBP - Libra Esterlina</option>
+                            <option value="JPY">JPY - Yen Japonés</option>
+                            <option value="CAD">CAD - Dólar Canadiense</option>
+                            <option value="AUD">AUD - Dólar Australiano</option>
+                            <option value="CHF">CHF - Franco Suizo</option>
+                            <option value="CNY">CNY - Yuan Chino</option>
+                            <option value="MXN">MXN - Peso Mexicano</option>
+                            <option value="BRL">BRL - Real Brasileño</option>
+                            <option value="ARS">ARS - Peso Argentino</option>
+                            <option value="CLP">CLP - Peso Chileno</option>
+                            <option value="COP">COP - Peso Colombiano</option>
+                            <option value="PEN">PEN - Sol Peruano</option>
+                            <option value="UYU">UYU - Peso Uruguayo</option>
+                            <option value="VEF">VEF - Bolívar Venezolano</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="result">
+                    <label>Resultado</label>
+                    <div class="result-display">
+                        <span id="result">1.00 EUR</span>
+                        <div class="rate-info">
+                            <span id="rateInfo">1 USD = 0.85 EUR</span>
+                            <span id="lastUpdate">Última actualización: <span id="updateTime"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="convertBtn" class="convert-btn">
+                    <i class="fas fa-sync-alt"></i> Convertir
+                </button>
+            </div>
+
+            <div class="popular-conversions">
+                <h3>Conversiones Populares</h3>
+                <div class="conversion-grid">
+                    <div class="conversion-item" data-from="USD" data-to="EUR">
+                        <span class="currency-pair">USD → EUR</span>
+                        <span class="conversion-rate">0.85</span>
+                    </div>
+                    <div class="conversion-item" data-from="EUR" data-to="USD">
+                        <span class="currency-pair">EUR → USD</span>
+                        <span class="conversion-rate">1.18</span>
+                    </div>
+                    <div class="conversion-item" data-from="USD" data-to="GBP">
+                        <span class="currency-pair">USD → GBP</span>
+                        <span class="conversion-rate">0.73</span>
+                    </div>
+                    <div class="conversion-item" data-from="USD" data-to="JPY">
+                        <span class="currency-pair">USD → JPY</span>
+                        <span class="conversion-rate">110.50</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Datos proporcionados por <a href="https://exchangerate-api.com" target="_blank">Exchange Rate API</a></p>
+            <p>Las tasas de cambio se actualizan cada hora</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
